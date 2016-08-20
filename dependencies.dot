@@ -1,0 +1,427 @@
+digraph "maven2-dependencies" {
+	rankdir=LR;
+	compound=true;
+	node [ shape=box style=dashed ];
+	edge [ arrowhead=open arrowtail=open style=dashed ];
+
+	"maven2"            [ style=solid shape=oval ];
+
+	"ant"               [ style=solid ];
+	"antlr"             [ style=solid ];
+	"bcel"              [ style=solid ];
+	"bea-stax"          [ style=solid ];
+	"bea-stax-api"      [ style=solid ];
+	"bsh"               [ style=solid ];
+	"geronimo-specs"    [ style=solid ];
+	"jakarta-oro"       [ style=solid ];
+	"jpackage-utils"    [ style=solid ];
+	"jdom"              [ style=solid ];
+	"jline"             [ style=solid ];
+	"jsch"              [ style=solid ];
+	"jtidy"             [ style=solid ];
+	"junit"             [ style=solid ];
+	"log4j"             [ style=solid ];
+	"lucene-demo"       [ style=solid ];
+	"objectweb-asm"     [ style=solid ];
+	"regexp"            [ style=solid ];
+	"rhino"             [ style=solid ];
+	"slf4j"             [ style=solid ];
+	"velocity"          [ style=solid ];
+	"ws-jaxme"          [ style=solid ];
+	"xalan-j2"          [ style=solid ];
+	"xerces-j2"         [ style=solid label="xerces-j2\n(jaxp_parser_impl)" ];
+	"xml-commons-apis"  [ style=solid label="xml-commons-apis\n(jaxp,xml-commons-jaxp-1.3-apis)" ];
+
+
+	"maven2" -> "ant";
+	"maven2" -> "antlr";
+	"maven2" -> "apache-commons-beanutils";
+	"maven2" -> "apache-commons-cli";
+	"maven2" -> "apache-commons-collections";
+	"maven2" -> "apache-commons-io";
+	"maven2" -> "apache-commons-lang";
+	"maven2" -> "apache-commons-logging";
+	"maven2" -> "apache-commons-validator";
+	"maven2" -> "aqute-bndlib";
+	"maven2" -> "bsh";
+	"maven2" -> "checkstyle4";
+	"maven2" -> "classworlds";
+	"maven2" -> "dom4j";
+	"maven2" -> "glassfish-javamail";
+	"maven2" -> "gnu.regexp";
+	"maven2" -> "httpunit";
+	"maven2" -> "java";
+	"maven2" -> "jaxen";
+	"maven2" -> "jdom";
+	"maven2" -> "jline";
+	"maven2" -> "jsch";
+	"maven2" -> "jtidy";
+	"maven2" -> "junit";
+	"maven2" -> "maven2-common-poms";
+	"maven2" -> "maven-jxr";
+	"maven2" -> "maven-wagon";
+	"maven2" -> "nekohtml";
+	"maven2" -> "oro";
+	"maven2" -> "plexus-ant-factory";
+	"maven2" -> "plexus-archiver";
+	"maven2" -> "plexus-bsh-factory";
+	"maven2" -> "plexus-compiler";
+	"maven2" -> "plexus-container-default";
+	"maven2" -> "plexus-i18n";
+	"maven2" -> "plexus-interactivity";
+	"maven2" -> "plexus-utils";
+	"maven2" -> "plexus-velocity";
+	"maven2" -> "pmd";
+	"maven2" -> "qdox";
+	"maven2" -> "rhino";
+	"maven2" -> "tomcat5-servlet-2.4-api";
+	"maven2" -> "velocity";
+	"maven2" -> "xalan-j2";
+	"maven2" -> "xerces-j2";
+	"maven2" -> "xmlrpc";
+	"maven2" -> "xmlunit";
+	"maven2" -> "xom";
+
+//	"maven2"                      -> "jpackage-utils";
+//	"apache-commons-beanutils"    -> "jpackage-utils";
+//	"apache-commons-cli"          -> "jpackage-utils";
+//	"apache-commons-collections"  -> "jpackage-utils";
+//	"apache-commons-io"           -> "jpackage-utils";
+//	"apache-commons-lang"         -> "jpackage-utils";
+//	"apache-commons-logging"      -> "jpackage-utils";
+//	"apache-commons-validator"    -> "jpackage-utils";
+//	"apache-commons-digester"     -> "jpackage-utils";
+//	"aqute-bndlib"                -> "jpackage-utils";
+//	"checkstyle4"                 -> "jpackage-utils";
+//	"classworlds"                 -> "jpackage-utils";
+//	"dom4j"                       -> "jpackage-utils";
+//	"xom"                         -> "jpackage-utils";
+//	"msv"                         -> "jpackage-utils";
+//	"msv-xsdlib"                  -> "jpackage-utils";
+//	"jaxen"                       -> "jpackage-utils";
+//	"xml-commons-resolver11"      -> "jpackage-utils";
+//	"codehaus-stax-api"           -> "jpackage-utils";
+//	"xpp2"                        -> "jpackage-utils";
+//	"xpp3"                        -> "jpackage-utils";
+//	"gnu-regexp"                  -> "jpackage-utils";
+//	"httpunit"                    -> "jpackage-utils";
+//	"nekohtml"                    -> "jpackage-utils";
+//	"maven2-common-poms"          -> "jpackage-utils";
+//	"maven-jxr"                   -> "jpackage-utils";
+//	"maven-shared-reporting-impl" -> "jpackage-utils";
+//	"maven-doxia"                 -> "jpackage-utils";
+//	"plexus-container-default"    -> "jpackage-utils";
+//	"plexus-utils"                -> "jpackage-utils";
+//	"plexus-interpolation"        -> "jpackage-utils";
+//	"plexus-i18n"                 -> "jpackage-utils";
+//	"plexus-velocity"             -> "jpackage-utils";
+//	"maven-shared"                -> "jpackage-utils";
+//	"maven-wagon"                 -> "jpackage-utils";
+//	"apache-commons-httpclient"   -> "jpackage-utils";
+//	"apache-commons-codec"        -> "jpackage-utils";
+//	"apache-commons-net"          -> "jpackage-utils";
+//	"ganymed-ssh2"                -> "jpackage-utils";
+//	"xmlbeans"                    -> "jpackage-utils";
+//	"saxon9"                      -> "jpackage-utils";
+//	"cglib"                       -> "jpackage-utils";
+//	"concurrent"                  -> "jpackage-utils";
+//	"day-jcr-1.0-api"             -> "jpackage-utils";
+//	"json"                        -> "jpackage-utils";
+//	"lucene24"                    -> "jpackage-utils";
+//	"pdfbox"                      -> "jpackage-utils";
+//	"bouncycastle"                -> "jpackage-utils";
+//	"fontbox"                     -> "jpackage-utils";
+//	"jsoup"                       -> "jpackage-utils";
+//	"maven-scm"                   -> "jpackage-utils";
+//	"javacvs"                     -> "jpackage-utils";
+//	"plexus-cipher"               -> "jpackage-utils";
+//	"google-guice"                -> "jpackage-utils";
+//	"aopalliance"                 -> "jpackage-utils";
+//	"sisu2"                       -> "jpackage-utils";
+//	"apache-felix"                -> "jpackage-utils";
+//	"kxml2"                       -> "jpackage-utils";
+//	"google-collections"          -> "jpackage-utils";
+//	"sisu-guice"                   -> "jpackage-utils";
+//	"atinject"                     -> "jpackage-utils";
+//	"sisu-maven-plugin"            -> "jpackage-utils";
+//	"sonatype-plugins-parent"      -> "jpackage-utils";
+//	"forge-parent"                 -> "jpackage-utils";
+//	"plexus-sec-dispatcher"        -> "jpackage-utils";
+//	"plexus-interactivity"         -> "jpackage-utils";
+
+	"apache-commons-beanutils"   -> "apache-commons-collections";
+	"apache-commons-beanutils"   -> "apache-commons-logging";
+
+	"apache-commons-validator"   -> "apache-commons-beanutils";
+	"apache-commons-validator"   -> "apache-commons-collections";
+	"apache-commons-validator"   -> "apache-commons-digester";
+	"apache-commons-validator"   -> "apache-commons-logging";
+	"apache-commons-validator"   -> "jakarta-oro";
+
+	"apache-commons-digester"    -> "apache-commons-beanutils";
+	"apache-commons-digester"    -> "apache-commons-collections";
+	"apache-commons-digester"    -> "apache-commons-logging";
+
+	"checkstyle4"                -> "ant";
+	"checkstyle4"                -> "antlr";
+	"checkstyle4"                -> "apache-commons-beanutils";
+	"checkstyle4"                -> "apache-commons-cli";
+	"checkstyle4"                -> "apache-commons-collections";
+	"checkstyle4"                -> "apache-commons-logging";
+	"checkstyle4"                -> "xerces-j2"; // jaxp_parser_impl
+	"checkstyle4"                -> "regexp";
+
+	"classworlds"                -> "xerces-j2";
+	"classworlds"                -> "xml-commons-apis"; // xml-commons-jaxp-1.3-apis
+
+	"dom4j"                      -> "isorelax";
+	"dom4j"                      -> "jaxen";
+	"dom4j"                      -> "xml-commons-apis"; // jaxp
+	"dom4j"                      -> "msv-msv";
+	"dom4j"                      -> "msv-xsdlib";
+	"dom4j"                      -> "relaxngDatatype";
+	"dom4j"                      -> "codehaus-stax-api"; // stax_1_0_api
+	"dom4j"                      -> "ws-jaxme";
+	"dom4j"                      -> "xalan-j2";
+	"dom4j"                      -> "xerces-j2";
+	"dom4j"                      -> "xpp2";
+	"dom4j"                      -> "xpp3";
+
+	"isorelax"                   -> "xerces-j2";
+	"isorelax"                   -> "xml-commons-apis";
+
+	"jaxen"                      -> "dom4j";
+	"jaxen"                      -> "jdom";
+	"jaxen"                      -> "xalan-j2";
+	"jaxen"                      -> "xerces-j2";
+	"jaxen"                      -> "xom";
+
+	"xom"                        -> "xalan-j2";
+	"xom"                        -> "xerces-j2";
+	"xom"                        -> "xml-commons-apis"; // xml-commons-jaxp-1.3-apis
+
+	"msv"                        -> "isorelax";
+	"msv"                        -> "msv-xsdlib";
+	"msv"                        -> "relaxngDatatype";
+	"msv"                        -> "tomcat6-servlet-2.5-api"; // servletapi5,servlet_2_5_api
+	"msv"                        -> "xerces-j2";
+	"msv"                        -> "xml-commons-apis"; // xml-commons-jaxp-1.3-apis
+	"msv"                        -> "xml-commons-resolver11";
+
+	"msv-xsdlib"                 -> "msv";
+	"msv-xsdlib"                 -> "relaxngDatatype";
+
+	"xml-commons-resolver11"     -> "xerces-j2"; // jaxp_parser_impl
+	"xml-commons-resolver11"     -> "xml-commons-apis"; // xml-commons, xml-commons-jaxp-1.3-apis
+
+	"xpp2"                       -> "xml-commons-apis"; // xml-commons-jaxp-1.3-apis
+
+	"glassfish-javamail"         -> "glassfish-jaf";
+
+//	"gnu-regexp"                 -> "java-devel";
+
+	"httpunit"                   -> "jtidy";
+	"httpunit"                   -> "junit";
+	"httpunit"                   -> "nekohtml";
+	"httpunit"                   -> "rhino";
+	"httpunit"                   -> "tomcat6-servlet-2.5-api"; // servlet_2_5_api
+	"httpunit"                   -> "xerces-j2";
+	"httpunit"                   -> "xml-commons-jaxp-1.3-apis";
+
+	"nekohtml"                   -> "bcel";
+	"nekohtml"                   -> "xerces-j2";
+	"nekohtml"                   -> "xml-commons-apis"; // xml-commons-jaxp-1.3-apis
+
+	"maven-jxr"                  -> "classworlds";
+	"maven-jxr"                  -> "apache-commons-collections"; // jakarta-commons-collections
+	"maven-jxr"                  -> "apache-commons-lang"; // jakarta-commons-lang
+	"maven-jxr"                  -> "jakarta-oro";
+	"maven-jxr"                  -> "maven2"; // maven2-bootstrap
+	"maven-jxr"                  -> "maven-shared-reporting-impl";
+	"maven-jxr"                  -> "plexus-container-default";
+	"maven-jxr"                  -> "plexus-i18n";
+	"maven-jxr"                  -> "plexus-utils";
+	"maven-jxr"                  -> "plexus-velocity";
+	"maven-jxr"                  -> "velocity14";
+
+	"maven-shared-reporting-impl" -> "apache-commons-validator";
+	"maven-shared-reporting-impl" -> "oro"; // jakarta-oro
+	"maven-shared-reporting-impl" -> "maven2"; // maven2-bootstrap
+	"maven-shared-reporting-impl" -> "maven-doxia";
+	"maven-shared-reporting-impl" -> "maven-shared";
+
+	"maven-doxia"                 -> "apache-commons-collections";
+	"maven-doxia"                 -> "apache-commons-logging";
+	"maven-doxia"                 -> "apache-commons-validator";
+	"maven-doxia"                 -> "classworlds";
+	"maven-doxia"                 -> "junit";
+	"maven-doxia"                 -> "oro"; // jakarta-oro
+	"maven-doxia"                 -> "plexus-container-default";
+	"maven-doxia"                 -> "plexus-i18n";
+	"maven-doxia"                 -> "plexus-utils";
+	"maven-doxia"                 -> "plexus-velocity";
+	"maven-doxia"                 -> "velocity";
+
+	"plexus-container-default"    -> "classworlds";
+	"plexus-container-default"    -> "plexus-utils";
+
+	"plexus-utils"                -> "plexus-interpolation";
+
+	"plexus-i18n"                 -> "classworlds";
+	"plexus-i18n"                 -> "plexus-container-default";
+	"plexus-i18n"                 -> "plexus-utils";
+
+	"plexus-velocity"             -> "classworlds";
+	"plexus-velocity"             -> "apache-commons-collections"; // jakarta-commons-collections
+	"plexus-velocity"             -> "plexus-container-default";
+	"plexus-velocity"             -> "plexus-utils";
+	"plexus-velocity"             -> "velocity";
+
+	"maven-shared"                -> "bcel";
+	"maven-shared"                -> "maven2"; // maven2-bootstrap
+
+	"maven-wagon"                 -> "apache-commons-httpclient";
+	"maven-wagon"                 -> "apache-commons-net";
+	"maven-wagon"                 -> "ganymed-ssh2";
+	"maven-wagon"                 -> "jackrabbit";
+	"maven-wagon"                 -> "jsch";
+	"maven-wagon"                 -> "jsoup";
+	"maven-wagon"                 -> "jtidy";
+	"maven-wagon"                 -> "maven-scm-test";
+	"maven-wagon"                 -> "nekohtml";
+	"maven-wagon"                 -> "plexus-interactivity";
+	"maven-wagon"                 -> "plexus-utils";
+
+	"apache-commons-httpclient"   -> "apache-commons-codec";
+	"apache-commons-httpclient"   -> "apache-commons-logging";
+
+	"apache-commons-net"          -> "oro"; // jakarta-oro
+
+	"jackrabbit"                  -> "apache-commons-beanutils";
+	"jackrabbit"                  -> "apache-commons-collections";
+	"jackrabbit"                  -> "apache-commons-digester";
+	"jackrabbit"                  -> "apache-commons-httpclient";
+	"jackrabbit"                  -> "apache-commons-io";
+	"jackrabbit"                  -> "apache-commons-lang";
+	"jackrabbit"                  -> "apache-poi";
+	"jackrabbit"                  -> "cglib";
+	"jackrabbit"                  -> "concurrent";
+	"jackrabbit"                  -> "j2ee_connector_1_5_api";
+	"jackrabbit"                  -> "jcr_1_0_api";
+	"jackrabbit"                  -> "jpackage-utils";
+	"jackrabbit"                  -> "json";
+	"jackrabbit"                  -> "jta_1_0_1B_api";
+	"jackrabbit"                  -> "lucene";
+	"jackrabbit"                  -> "pdfbox";
+	"jackrabbit"                  -> "tomcat6-servlet-2.5-api"; // servletapi5,servlet_2_5_api
+	"jackrabbit"                  -> "slf4j";
+
+	"apache-pio"                  -> "apache-commons-codec";
+	"apache-pio"                  -> "apache-commons-logging";
+	"apache-pio"                  -> "dom4j";
+	"apache-pio"                  -> "log4j";
+	"apache-pio"                  -> "codehaus-stax-api"; // stax_1_0_api
+	"apache-pio"                  -> "xmlbeans";
+
+	"xmlbeans"                    -> "saxon9";
+	"xmlbeans"                    -> "saxon9-dom";
+	"xmlbeans"                    -> "saxon9-xpath";
+	"xmlbeans"                    -> "codehaus-stax-api"; // stax_1_0_api
+	"xmlbeans"                    -> "xml-commons-resolver11";
+
+	"saxon9"                      -> "bea-stax";
+	"saxon9"                      -> "bea-stax-api";
+	"saxon9"                      -> "xerces-j2"; // jaxp_parser_impl
+
+	"saxon9-dom"                  -> "saxon9";
+
+	"saxon9-xpath"                -> "saxon9";
+
+	"cglib"                       -> "objectweb-asm";
+
+	"geronimo-j2ee-connector"     -> "geronimo-specs";
+	"geronimo-j2ee-connector"     -> "jta_1_0_1B_api"; // geronimo-jta
+
+	"geronimo-jta"                -> "geronimo-specs";
+
+	"pdfbox"                      -> "bouncycastle";
+	"pdfbox"                      -> "fontbox";
+	"pdfbox"                      -> "lucene";
+	"pdfbox"                      -> "lucene-demo";
+
+	"maven-scm-test"              -> "junit";
+	"maven-scm-test"              -> "maven-scm";
+
+	"maven-scm"                   -> "ganymed-ssh2";
+	"maven-scm"                   -> "javacvs-lib";
+	"maven-scm"                   -> "maven2"; // maven2-bootstrap
+	"maven-scm"                   -> "plexus-cipher";
+	"maven-scm"                   -> "plexus-container-default";
+	"maven-scm"                   -> "plexus-sec-dispatcher";
+	"maven-scm"                   -> "plexus-utils";
+	"maven-scm"                   -> "regexp";
+
+	"javacvs-lib"                 -> "javacvs";
+
+	"plexus-cipher"               -> "google-guice";
+	"plexus-cipher"               -> "sisu2";
+	"plexus-cipher"               -> "sisu-maven-plugin";
+
+	"google-guice"                -> "aopalliance";
+	"google-guice"                -> "cglib";
+	"google-guice"                -> "objectweb-asm";
+
+	"sisu2"                       -> "aopalliance";
+	"sisu2"                       -> "apache-felix-framework";
+	"sisu2"                       -> "apache-felix-main";
+	"sisu2"                       -> "apache-felix-shell";
+	"sisu2"                       -> "plexus-containers-component-annotations";
+	"sisu2"                       -> "sisu-guice >= 2.1.7";
+	"sisu2"                       -> "slf4j";
+
+	"apache-felix-framework"      -> "apache-felix";
+
+	"apache-felix"                -> "apache-felix-osgi-compendium";
+	"apache-felix"                -> "apache-felix-osgi-core";
+
+	"apache-felix-osgi-compendium" -> "apache-felix";
+	"apache-felix-osgi-compendium" -> "apache-felix-javax-servlet";
+	"apache-felix-osgi-compendium" -> "apache-felix-osgi-foundation";
+
+	"apache-felix-javax-servlet"   -> "apache-felix";
+
+	"apache-felix-osgi-foundation" -> "apache-felix";
+
+	"apache-felix-osgi-core"       -> "apache-felix";
+
+	"apache-felix-main"            -> "apache-felix";
+
+	"apache-felix-main"            -> "apache-felix-framework";
+
+	"apache-felix-shell"           -> "apache-felix";
+	"apache-felix-shell"           -> "kxml2";
+
+	"kxml2"                        -> "xpp3";
+
+	"plexus-containers-component-annotations" -> "plexus-containers";
+	"plexus-containers"                       -> "google-collections";
+
+	"sisu-guice"                   -> "aopalliance";
+	"sisu-guice"                   -> "apache-felix-framework";
+	"sisu-guice"                   -> "atinject";
+	"sisu-guice"                   -> "cglib";
+	"sisu-guice"                   -> "jpa_3_0_api";
+
+	"geronimo-jpa"                 -> "geronimo-specs";
+
+	"sisu-maven-plugin"            -> "sonatype-plugins-parent";
+
+	"sonatype-plugins-parent"      -> "forge-parent";
+
+	"plexus-interactivity"         -> "jline";
+	"plexus-interactivity"         -> "plexus-container-default";
+	"plexus-interactivity"         -> "plexus-utils";
+
+
+}
+

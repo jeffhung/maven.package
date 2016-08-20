@@ -1,0 +1,9 @@
+rpm.make
+roles
+build
+files
+.vagrant
+apache-couchdb-*.tar.gz
+dependencies.*
+*.retry
+

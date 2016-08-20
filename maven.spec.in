@@ -1,0 +1,58 @@
+%define rpm_name       #RPM_NAME#
+%define rpm_version    #RPM_VERSION#
+%define rpm_source0    #RPM_SOURCE0#
+
+# See: https://github.com/nmilford/rpm-maven/blob/master/maven.spec
+
+Summary:        Apache Maven software project management and comprehension tool.
+Name:           %{rpm_name}
+Version:        %{rpm_version}
+Release:        0%{?dist}
+License:        Apache
+Group:          Development/Build Tools
+URL:            http://maven.apache.org/
+BuildArch:      noarch
+BuildRoot:      %{_tmppath}/%{name}-%{version}-buildroot
+
+Source0:         %{rpm_source0}
+#Source1:         %{rpm_source1}
+
+
+%description
+Apache Maven is a software project management and comprehension tool. Based on
+the concept of a project object model (POM), Maven can manage a project's
+build, reporting and documentation from a central piece of information.
+
+%prep
+%setup -q -n apache-maven-%{version}
+
+%build
+
+%install
+rm -rf %{buildroot}
+install -d -m 755 %{buildroot}/opt/apache-%{name}-%{version}
+cp -R %{_builddir}/apache-%{name}-%{version}/* %{buildroot}/opt/apache-%{name}-%{version}/
+
+install -d -m 755 %{buildroot}/etc/profile.d/
+echo 'export MAVEN_HOME=/opt/apache-%{name}-%{version}'      > %{buildroot}/etc/profile.d/%{name}.sh
+echo 'export PATH=/opt/apache-%{name}-%{version}/bin:$PATH' >> %{buildroot}/etc/profile.d/%{name}.sh
+
+#%clean
+#rm -rf %{buildroot}
+
+%post
+echo
+echo "You will need to exit your shell to have mvn in your default path."
+echo "Or run the following"
+echo '  export MAVEN_HOME=/opt/maven'
+echo '  export PATH=/opt/maven/bin:$PATH'
+echo
+
+%files
+/opt/apache-%{name}-%{version}
+/etc/profile.d/%{name}.sh
+
+%changelog
+* Sat Aug 20 2016 Jeff Hung <jeff.cc.hung@gmail.com>
+- Initial implementation
+
